@@ -8,6 +8,8 @@ class Modelling3dsController < ApplicationController
    end
 
    def show
+    puts @@path = request.path
+    puts @@path[@@path.length - 1]
       @simpleModelling3d = Modelling3d.find(params[:id])
    end
 
@@ -51,7 +53,8 @@ class Modelling3dsController < ApplicationController
    end
 
    def getData
-    @JSONDATA = Review.last(10).to_json
+   puts "this is it"+@@path
+    @JSONDATA = Review.where(modelling3d_id: @@path[@@path.length - 1]).to_json
       send_data @JSONDATA, :type => 'application/json', :disposition => 'inline'
    end
 

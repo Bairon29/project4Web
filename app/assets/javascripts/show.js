@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 $.ajax({
-  url: 'https://modellingproject.herokuapp.com/data',
+  url: 'http://localhost:5000/data',
   method: 'GET',
 }).done(function(data){
   console.log(data)
@@ -14,7 +14,7 @@ $.ajax({
 clearInterval(stop)
 var stop = setInterval(function(){
 $.ajax({
-  url: 'https://modellingproject.herokuapp.com/data',
+  url: 'http://localhost:5000/data',
   method: 'GET',
 }).done(function(data){
   console.log(data)

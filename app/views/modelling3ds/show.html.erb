@@ -21,7 +21,7 @@
     <% if flash[:notice] %>
     <div class="notice"><%= flash[:notice] %></div>
   <% end %>
-    <%= form_for "reviews", method: 'post', url: {action: 'create', :controller => :reviews} do |f| %>
+    <%= form_for "reviews", method: 'post', url: {action: 'create', :controller => :reviews, id: @simpleModelling3d.id} do |f| %>
       <%= f.label :id %> <br>
       <%= f.text_field :id, :value => @simpleModelling3d.id, :readonly => true %> <br>
         <%= f.label :model %> <br>
