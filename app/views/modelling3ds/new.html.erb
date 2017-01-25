@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  <%= form_for @modelling3d, html: { multipart: true } do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <%= f.label :attachment %>
+      <%= f.file_field :attachment %>
+      <%= f.label :downloads %>
+      <%= f.text_field :downloads %>
+      <%= f.label :category %>
+      <%= f.text_field :category %>
+      <%= f.label :filetype %>
+      <%= f.text_field :filetype %>
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+       <%= f.label :image1 %>
+      <%= f.text_field :image1 %>
+      <%= f.label :image2 %>
+      <%= f.text_field :image2 %>
+      <%= f.label :image3 %>
+      <%= f.text_field :image3 %>
+      <%= f.submit "Save", class: "btn btn-primary" %>
+   <% end %>
+</body>
+</html>

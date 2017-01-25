@@ -1,0 +1,140 @@
+body{
+  /* background-image: url('https://media.giphy.com/media/wkKYDqhu9pxde/giphy.gif') ; */
+ /* background: filter(url('https://media.giphy.com/media/wkKYDqhu9pxde/giphy.gif'), blur(5px)); */
+margin: 0;
+padding: 0;
+   /* filter: blur(5px); */
+
+}
+
+.background{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  image-rendering: pixelated;
+  top: 0;
+  z-index: -1;
+}
+
+.main-container{
+  width: 800px;
+  height: 555px;
+  margin: 5% auto;
+  border-radius: 10%;
+  border:  3px solid rgba(0, 0, 0, .9);
+  z-index: -1;
+  background: white;
+  background: linear-gradient(bottom, rgba(256,256,256,1), rgba(256,256,256,.4));
+  background: -webkit-linear-gradient(bottom, rgba(256,256,256,1), rgba(256,256,256,.4));
+  background: -moz-linear-gradient(bottom, rgba(256,256,256,1), rgba(256,256,256,.4));
+}
+
+.contact-container{
+  position: absolute;
+  left: 65%;
+  top: 4.1%;
+  background: white;
+  background: linear-gradient(bottom, rgba(256,256,256,1), rgba(256,256,256,.4));
+  background: -webkit-linear-gradient(bottom, rgba(256,256,256,1), rgba(256,256,256,.4));
+  background: -moz-linear-gradient(bottom, rgba(256,256,256,1), rgba(256,256,256,.4));
+  /* background: white; */
+  padding: .4%;
+  width: 90px;
+  text-align: center;
+  border-left:  3px solid rgba(0, 0, 0, .9);
+  border-top: 3px solid rgba(0, 0, 0, .9);
+  border-right: 3px solid rgba(0, 0, 0, .9);
+  border-radius: 20% 20% 0 0;
+}
+
+.contact-container:hover{
+    background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+}
+
+.contact:hover{
+color: white;
+}
+
+.contact{
+font-size: 150%;
+text-decoration: none;
+color: black;
+}
+
+.image-container{
+  position: absolute;
+  left: 39%;
+  top: 15%;
+  width: 300px;
+  height: 300px;
+}
+
+.image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+}
+
+.description-container{
+  position: absolute;
+  top: 55%;
+  left: 27%;
+}
+.description{
+  color: black;
+  font-size: 150%;
+ font-family: 'Sofadi One', cursive;
+}
+
+/* .shadder{
+  position: absolute;
+   top: 75%;
+   left: 43.5%;
+   width: 212px;
+   height: 50px;
+
+   animation: shadderbox 2s 1;
+} */
+.shadder-inner{
+  position: absolute;
+  left: -4px;
+  opacity: .2;
+}
+.enter-container:hover .shadder-inner{
+ background: black;
+ opacity: .5;
+animation: shadderbox 2s 1;
+width: 212px;
+height: 50px;
+z-index: -1;
+}
+
+@keyframes shadderbox{
+  0% {
+    width: 0;
+   height: 0;
+  }
+
+   100%{
+   width: 212px;
+   height: 50px;
+  }
+}
+
+.enter-container{
+   position: absolute;
+   top: 75%;
+   left: 44%;
+   z-index: 1;
+}
+.enter{
+  text-decoration: none;
+  color: black;
+  font-size: 200%;
+  font-family: 'Lemonada', cursive;
+  z-index: 1;
+}

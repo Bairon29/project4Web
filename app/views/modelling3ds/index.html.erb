@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+<div class="slideshow">
+ <div class="slide"></div>
+</div>
+
+
+<div class="model-container">
+  <header class="category">
+    <nav id="weapon" class="nava">Weapon</nav>
+    <nav id="assesories" class="nava">Assesories</nav>
+    <%= link_to "New Model", new_modelling3d_path, class: "nava" %>
+  </header>
+
+  <div class="category-container">
+    <% @weaponModels.each do |modelling3d| %>
+      <div  id="weapon-container" class="model">
+                <h1 class="name"><%= modelling3d.name %></h1>
+                <img class="display-image" src="<%= modelling3d.image1 %>">
+                <h4><%=modelling3d.downloads%></h4>
+                <%= button_to "Delete",  modelling3d, method: :delete, class: "btn", confirm: "Are you sure that you wish to delete #{modelling3d.name}?" %>
+                <%= link_to "View Model", modelling3d_path(modelling3d), class: "view"%>
+      </div>
+    <% end %>
+
+    <% @assesoriesModels.each do |modelling3d| %>
+      <div id="assesories-container" class="model">
+                <h1 class="name"><%= modelling3d.name %></h1>
+                <img class="display-image" src="<%= modelling3d.image1 %>">
+                <h4><%=modelling3d.downloads%></h4>
+                <%= button_to "Delete",  modelling3d, method: :delete, class: "btn", confirm: "Are you sure that you wish to delete #{modelling3d.name}?" %>
+                <%= link_to "View Model", modelling3d_path(modelling3d), class: "view"%>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= javascript_include_tag "index" %>
+</body>
+</html>

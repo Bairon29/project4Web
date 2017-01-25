@@ -1,0 +1,94 @@
+.slideshow{
+  margin-top: 0;
+  width: 100%;
+  background: rgba(0,0,0, .4);
+  text-align: center;
+  .slide{
+    margin: 0 auto;
+
+  img{
+    width: 500px;
+    height: 300px;
+  }
+animation: slideEffect 4s infinite;
+  }
+}
+
+
+@keyframes slideEffect {
+  0% {
+    opacity: .2;
+  }
+  100% {
+  opacity: 1;
+  }
+}
+
+
+
+  .model-container{
+  background: rgba(0, 0, 0, .3);
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+
+
+    .category{
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+    text-align: center;
+      .nava{
+        display: inline-block;
+        font-size: 150%;
+        margin-right: 5%;
+        text-decoration: none;
+        color: black;
+        }
+
+        .nava:hover{
+          background: white;
+          color: gray;
+          cursor: pointer;
+        }
+    }
+
+    #weapon-container{
+            opacity: 1;
+            position: relative;
+          }
+    #assesories-container{
+            opacity: 0;
+            position: absolute;
+          }
+    .category-container{
+      margin: 5% auto;
+      width: 80%;
+      background: rgba(0, 0, 0, .5);
+
+      .model{
+        display: inline-block;
+        margin-right: 2%;
+        margin-left: 5%;
+        text-align: center;
+        margin-bottom: 2%;
+
+        .view{
+            text-decoration: none;
+            background: rgba(0, 0, 0, .5);
+            color: black;
+            font-size: 150%;
+            padding: 0 40px 0 40px;
+            border-radius: 0 0 40% 40%;
+            border: 2px solid lightskyblue;
+        }
+
+      }
+
+    }
+
+
+
+  }
+
+
+
