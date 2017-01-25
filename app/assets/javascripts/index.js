@@ -2,7 +2,7 @@ $(document).ready(function() {
 var slides = [];
 var count = 1;
 $.ajax({
-  url: 'http://localhost:5000/popular',
+  url: 'https://modellingproject.herokuapp.com/popular',
   method: 'GET',
 }).done(function(data){
   console.log(data);
