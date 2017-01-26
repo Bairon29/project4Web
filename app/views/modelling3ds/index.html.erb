@@ -7,10 +7,13 @@
   <link rel="stylesheet" href="">
 </head>
 <body>
-<div class="slideshow">
- <div class="slide"></div>
+<div class="slideshow-container">
+<div class="placeholer"><h1>hiiii</h1></div>
+  <div class="slideshow">
+    <div class="slide"></div>
+    <div class="slide1"></div>
+  </div>
 </div>
-
 
 <div class="model-container">
   <header class="category">
@@ -41,6 +44,8 @@
     <% end %>
   </div>
 </div>
+<%= javascript_include_tag "jquery" %>
 <%= javascript_include_tag "index" %>
+<%= stylesheet_link_tag "index"%>
 </body>
 </html>

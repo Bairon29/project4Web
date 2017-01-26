@@ -1,7 +1,17 @@
 class Modelling3dsController < ApplicationController
-    # def initialize
-    #   @currentCategory = 'character'
-    # end
+    def initialize
+      found = true
+      count = 1
+      while(found)
+      if Review.exists?(count)
+        # @getid = Review.find(count)
+        # @@path = Review.find(count).id.to_s
+        found = false
+      else
+        count = count + 1
+      end
+    end
+    end
    def index
       @weaponModels = Modelling3d.all.where(category: 'character')
       @assesoriesModels = Modelling3d.all.where(category: 'assesories')
@@ -54,6 +64,7 @@ class Modelling3dsController < ApplicationController
 
    def getData
    puts "this is it"+@@path
+
     @JSONDATA = Review.where(modelling3d_id: @@path[@@path.length - 1]).to_json
       send_data @JSONDATA, :type => 'application/json', :disposition => 'inline'
    end
