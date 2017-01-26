@@ -32,4 +32,29 @@ $(".slide").html(name);
 $(".slide").append(img);
 }, 4000)
 
+
+
+
+$("#weapon").click(function(e){
+  // e.preventDefault();
+  $("#weapon-container").css('opacity', '1');
+  $("#weapon-container").css('position', 'relative');
+
+$("#assesories-container").css('opacity', '0');
+$("#assesories-container").css('position', 'absolute');
+
+});
+
+$("#assesories").click(function(e){
+
+$("#assesories-container").css('opacity', '1');
+$("#assesories-container").css('position', 'relative');
+
+$("#weapon-container").css('opacity', '0');
+  $("#weapon-container").css('position', 'absolute');
+
+});
+
+
+
 });
